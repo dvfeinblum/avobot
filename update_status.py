@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 from argparse import ArgumentParser
+from utils.brain import remember_tweet
 import requests
 from requests_oauthlib import OAuth1
 
-from config import Config
+from utils.config import Config
 
 
 def initialize_parser():
@@ -36,6 +37,7 @@ def send_tweet(body: str, config: Config):
             f"created_at: {body['created_at']}\n"
             f"id: {body['id']}\n"
         )
+        remember_tweet(body)
 
 
 if __name__ == "__main__":
