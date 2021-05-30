@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from argparse import ArgumentParser
-from utils.brain import remember_tweet
+from utils.tweet_memory import remember_tweet
 import requests
 from requests_oauthlib import OAuth1
 
@@ -40,6 +40,7 @@ def send_tweet(body: str, config: Config):
         remember_tweet(body)
 
 
+# To be removed at some point
 if __name__ == "__main__":
     args = initialize_parser()
     cfg = Config(args.secrets)

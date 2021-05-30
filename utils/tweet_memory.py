@@ -20,8 +20,8 @@ def remember_tweet(resp: Response):
     Stores tweet in avo's brain for later use.
     """
     dynamodb = boto3.resource("dynamodb")
-    brain = dynamodb.Table("avobot_tweets")
-    brain.put_item(
+    tweets_table = dynamodb.Table("avobot_tweets")
+    tweets_table.put_item(
         Item={
             "tweet_id": resp["id"],
             "created_at": parse_created_at(resp["created_at"]),
