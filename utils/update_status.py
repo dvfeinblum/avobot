@@ -1,22 +1,9 @@
-#!/usr/bin/env python3
-from argparse import ArgumentParser
-from utils.tweet_memory import remember_tweet
 import requests
 from requests_oauthlib import OAuth1
 
+from utils.tweet_memory import remember_tweet
 from utils.config import Config
-
-
-def initialize_parser():
-    """
-    Builds a parser for the args coming in. This is probably temporary
-    """
-    parser = ArgumentParser(description="Send a tweet!")
-    parser.add_argument(
-        "--secrets", type=str, required=True, help="Path to secrets.yml"
-    )
-    parser.add_argument("--text", required=True, type=str, help="tweet body")
-    return parser.parse_args()
+from utils.arg_parser import initialize_parser
 
 
 def send_tweet(body: str, config: Config):
@@ -38,6 +25,8 @@ def send_tweet(body: str, config: Config):
             f"id: {body['id']}\n"
         )
         remember_tweet(body)
+    else:
+        print(f"Something truly catastrophic happened:\n{resp.json()}")
 
 
 # To be removed at some point
