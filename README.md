@@ -16,4 +16,4 @@ PYTHONPATH=. python utils/blogpost_checker.py --secrets ~/path/to/secrets/file.y
 ```
 
 ## Things it Will Do
-1. Post a tweet when I go live on twitch
+1. Post a tweet when I go live on twitch (maybe)
