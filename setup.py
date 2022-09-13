@@ -9,7 +9,7 @@ setup(
         "boto3 ~= 1.17.83",
         "beautifulsoup4 ~= 4.9.3",
         "boto3 ~= 1.17.83",
-        "lxml ~= 4.6.3",
+        "lxml ~= 4.9.1",
         "pre-commit ~= 2.12.1",
         "pyyaml ~= 5.4.1",
         "requests ~= 2.25.1",
