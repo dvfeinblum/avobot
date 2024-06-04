@@ -12,7 +12,7 @@ setup(
         "lxml ~= 4.9.1",
         "pre-commit ~= 2.12.1",
         "pyyaml ~= 5.4.1",
-        "requests ~= 2.31.0",
+        "requests ~=2.32.0",
         "requests_oauthlib ~= 1.3.0",
     ],
 )
