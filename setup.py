@@ -9,10 +9,10 @@ setup(
         "boto3 ~= 1.17.83",
         "beautifulsoup4 ~= 4.9.3",
         "boto3 ~= 1.17.83",
-        "lxml ~= 4.9.1",
+        "lxml >= 6.1.0",
         "pre-commit ~= 2.12.1",
         "pyyaml ~= 5.4.1",
-        "requests ~=2.32.0",
+        "requests >= 2.33.0",
         "requests_oauthlib ~= 1.3.0",
     ],
 )
